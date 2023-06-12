@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@700&display=swap');
+body{
+    background-color: #000;
+}
+
+hr{
+    background-color: #fff;
+}
+#input{
+  background-color: black;
+  text-align: right;
+  font-size: 30px;
+  width: 260px;
+  color: white;
+  border: none;
+}
+
+.container {
+  margin: 5% auto;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .calculator {
+   
+    border: 5px solid #fff;
+    position: relative;
+    height: auto;
+    width: auto;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px white;
+  }
+  
+  
+  #display  {
+    margin: 0 10px 20px 10px;
+    height: 150px;
+    width: auto;
+    max-width: 270px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    
+    color: white;
+    font-weight: bold;
+    border-radius: 20px 20px 0px 0px;
+  }
+  
+  button {
+    height: 60px;
+    width: 60px;
+    border: none;
+    font-size: 30px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 30px;
+    background-color: #353935;
+    color: white;
+
+  }
+  
+  
+  button:hover {
+    transform: scale(110%);
+    opacity: 0.8;
+    background-color: azure;
+    color: #000;
+    
+    
+  }
+  
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    
+  }
+  
+  .btn-equal {
+    height: 92%;
+    grid-area: 4 / 4 / 6 / 5;
+  }
+  
+  .zero {
+    width: 92%;
+    grid-area: 5/1/6/3;
+  }
+  
+  .calculator .equalBtn {
+    grid-row: 3 / -1;
+
+    
+  }
+  #cleared{
+    color: red;
+  }
+  #equalto{
+        background-color: 	#32CD32;
+  }
+  .btn-operator{
+    color: #32CD32;
+  }
