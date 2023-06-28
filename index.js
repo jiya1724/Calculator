@@ -1,8 +1,7 @@
+
 let display = document.getElementById('input');
-
-let nb = document.querySelectorAll('.btn-number');
-
-let opb = document.querySelectorAll('.btn-operator');
+let numberButtons = document.querySelectorAll('.btn-number');
+let operatorButtons = document.querySelectorAll('.btn-operator');
 
 document.getElementById("cleared").addEventListener('click', () => {
   display.value = "";
@@ -11,7 +10,7 @@ document.getElementById("cleared").addEventListener('click', () => {
   }, 1000);
 });
 
-opb.forEach(button => {
+operatorButtons.forEach(button => {
   button.addEventListener('click', () => {
     display.value += button.id;
   });
@@ -19,18 +18,22 @@ opb.forEach(button => {
 
 document.getElementById('equalto').addEventListener('click', () => {
   const value = display.value;
-  calculate(value);
+  display.value = evaluateExpression(value);
 });
 
 document.getElementById('backspace').addEventListener('click', () => {
   display.value = display.value.slice(0, -1);
 });
 
-nb.forEach(button => {
-    button.addEventListener('click', () => {
-      display.value += button.textContent;
-    });
+numberButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    display.value += button.textContent;
   });
+});
+
+function evaluateExpression(expression) {
+  return eval(expression);
+}
 
   document.addEventListener("keydown", (e)=>{
   
